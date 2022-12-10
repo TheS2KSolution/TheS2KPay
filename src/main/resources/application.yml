@@ -1,0 +1,15 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/TheS2KPay?createDatabaseIfNotExist=true&autoReconnect=true&useSSL=false
+    username: root
+    password:
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+        ddl-auto: update
+    properties:
+        hibernate:
+          dialect: org.hibernate.dialect.MySQL8Dialect
