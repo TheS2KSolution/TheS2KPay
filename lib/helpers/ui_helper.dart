@@ -5,6 +5,21 @@ AppBar buildAppBar({required String title}) => AppBar(
       centerTitle: true,
     );
 
+Widget buildFormInput({
+  TextEditingController? controller,
+  String? labelText,
+  Widget? suffixIcon,
+}) =>
+    TextFormField(
+      controller: controller,
+      keyboardType: TextInputType.text,
+      decoration: InputDecoration(
+        border: const UnderlineInputBorder(),
+        labelText: labelText,
+        suffixIcon: suffixIcon,
+      ),
+    );
+
 MediaQueryData buildMediaQuery(BuildContext context) => MediaQuery.of(context);
 
 Widget buildButton({
