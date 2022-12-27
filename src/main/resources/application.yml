@@ -1,3 +1,6 @@
+jwt:
+  secret: '>"3(9;@Uf8hUPcWx"?v"2\}@&7{U}!>}]2,^N1Gkwt;\j]$LV/SH<4-O}@RHJ{h'
+
 server:
   port: 8080
 spring:
@@ -9,7 +12,14 @@ spring:
     database: mysql
     show-sql: true
     hibernate:
-        ddl-auto: update
+      ddl-auto: update
     properties:
-        hibernate:
-          dialect: org.hibernate.dialect.MySQL8Dialect
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+
+  mvc:
+    throw-exception-if-no-handler-found: true
+  web:
+    resources:
+      add-mappings: false
+
