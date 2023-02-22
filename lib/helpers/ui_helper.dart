@@ -7,11 +7,15 @@ AppBar buildAppBar({required String title}) => AppBar(
 
 Widget buildFormInput({
   TextEditingController? controller,
+  bool obscureText = false,
+  int? maxLength,
   String? labelText,
   Widget? suffixIcon,
 }) =>
     TextFormField(
       controller: controller,
+      obscureText: obscureText,
+      maxLength: maxLength,
       keyboardType: TextInputType.text,
       decoration: InputDecoration(
         border: const UnderlineInputBorder(),

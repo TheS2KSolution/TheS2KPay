@@ -1,10 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:s2k_pay/authentication/login.dart';
 import 'package:s2k_pay/authentication/signup.dart';
+import 'package:s2k_pay/helpers/ui_controller.dart';
 import 'package:s2k_pay/helpers/ui_helper.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (_) => UIController(),
+        )
+      ],
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
